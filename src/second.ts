@@ -9,9 +9,13 @@ class Instagram implements TakePhoto {
 }
 
 interface Story {
-    short: string
+    createStory: () => void
 }
 
 class Youtube implements TakePhoto, Story {
     constructor(cameraMode:string, filter: string, burst: number, short: string) {}
+
+    createStory() {
+        console.log('story is created');
+    }
 }
